@@ -1,0 +1,188 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
+    50% { box-shadow: 0 0 40px rgba(102, 126, 234, 0.8); }
+}
+
+.header.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+}
+
+.typing-text {
+    position: relative;
+}
+
+.typing-text::after {
+    content: '|';
+    position: absolute;
+    right: -10px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.service-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.service-card:hover .service-icon {
+    animation: pulse 1s ease-in-out;
+}
+
+.property-card-premium {
+    animation: scaleIn 0.5s ease-out;
+}
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.hero-badge {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-title {
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-description {
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-buttons {
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.stats-row {
+    animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.logo-icon {
+    transition: transform 0.3s ease;
+}
+
+.logo-icon:hover {
+    transform: rotate(360deg);
+    animation: glow 2s ease-in-out infinite;
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+.contact-method:hover i {
+    animation: bounce 0.5s ease;
+}
+
+.value-badge {
+    transition: all 0.3s ease;
+}
+
+.value-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
