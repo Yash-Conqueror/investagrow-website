@@ -120,4 +120,59 @@ document.addEventListener('DOMContentLoaded', function() {
         offset: 100
     });
 
+    const heroSwiper = new Swiper('.heroSwiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        speed: 1500,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    const statsCounters = document.querySelectorAll('.stat-counter');
+
+const animateCounter = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const target = parseInt(entry.target.getAttribute('data-target'));
+            const duration = 2500;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    entry.target.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    entry.target.textContent = Math.floor(current);
+                }
+            }, 16);
+            
+            observer.unobserve(entry.target);
+        }
+    });
+};
+
+const counterObserver = new IntersectionObserver(animateCounter, {
+    threshold: 0.5
+});
+
+statsCounters.forEach(counter => {
+    counterObserver.observe(counter);
+});
+    
+    
+
 });

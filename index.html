@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,12 +24,9 @@
         <nav class="navbar">
             <div class="nav-brand">
                 <div class="logo-container">
-                    <div class="logo-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
                     <div class="logo-text">
                         <h1 class="brand-name">INVESTAGROW</h1>
-                        <p class="brand-tagline">Capital & Property Management</p>
+                        <p class="brand-tagline">REAL ESTATE</p>
                     </div>
                 </div>
             </div>
@@ -49,303 +47,219 @@
         </nav>
     </header>
 
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
-                <span class="hero-badge">Premium Property Solutions</span>
-                <h1 class="hero-title">
-                    Transform Your
-                    <span class="gradient-text typing-text">Real Estate Journey</span>
-                </h1>
-                <p class="hero-description">
-                    We manage properties, maximize returns, and create sustainable living spaces across Kenya
-                </p>
-                <div class="hero-buttons">
-                    <a href="#properties" class="btn btn-primary-large">
-                        Explore Properties
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-outline-large">
-                        <i class="fas fa-phone"></i>
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-            
-            <div class="stats-row" data-aos="fade-up" data-aos-delay="300">
-                <div class="stat-item">
-                    <div class="stat-number" data-target="500">0</div>
-                    <div class="stat-label">Properties Managed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="1200">0</div>
-                    <div class="stat-label">Happy Clients</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="15">0</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">What We Offer</span>
-                <h2 class="section-title">Comprehensive Property Solutions</h2>
-                <p class="section-subtitle">End-to-end services designed to maximize your property investment</p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card" data-aos="flip-left" data-aos-delay="100">
-                    <div class="service-icon gradient-1">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Property Sales & Leasing</h3>
-                    <p>Expert guidance through buying, selling, and leasing processes with market insights</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="service-card" data-aos="flip-left" data-aos-delay="200">
-                    <div class="service-icon gradient-2">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Property Management</h3>
-                    <p>Full-service management including maintenance, tenant relations, and financial reporting</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="service-card" data-aos="flip-left" data-aos-delay="300">
-                    <div class="service-icon gradient-3">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Investment Analysis</h3>
-                    <p>Data-driven insights and ROI projections for informed investment decisions</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="service-card" data-aos="flip-left" data-aos-delay="400">
-                    <div class="service-icon gradient-4">
-                        <i class="fas fa-hard-hat"></i>
-                    </div>
-                    <h3>Property Development</h3>
-                    <p>From concept to completion - residential and commercial development projects</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="service-card" data-aos="flip-left" data-aos-delay="500">
-                    <div class="service-icon gradient-5">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <h3>Legal & Administrative</h3>
-                    <p>Complete legal support, documentation, and compliance management</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="service-card" data-aos="flip-left" data-aos-delay="600">
-                    <div class="service-icon gradient-6">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Valuation Services</h3>
-                    <p>Professional property valuation and market assessment services</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="properties" id="properties">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">Featured Listings</span>
-                <h2 class="section-title">Premium Properties</h2>
-                <p class="section-subtitle">Handpicked selection of exceptional properties</p>
-            </div>
-
-            <div class="swiper propertySwiper">
+    <main class="home-page">
+    
+        <!-- Section 1: Hero Carousel -->
+        <section class="home-section hero-carousel" id="home">
+            <div class="swiper heroSwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="property-card-premium">
-                            <div class="property-image">
-                                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Commercial Building">
-                                <div class="property-badge">For Sale</div>
-                            </div>
-                            <div class="property-details">
-                                <h3>Premium Commercial Complex</h3>
-                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> Westlands, Nairobi</p>
-                                <div class="property-specs">
-                                    <span><i class="fas fa-ruler-combined"></i> 5,000 sqft</span>
-                                    <span><i class="fas fa-layer-group"></i> 4 Floors</span>
-                                </div>
-                                <div class="property-footer">
-                                    <div class="property-price">KSH 85M</div>
-                                    <a href="#contact" class="btn-view">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="property-card-premium">
-                            <div class="property-image">
-                                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80" alt="Luxury Apartments">
-                                <div class="property-badge">For Rent</div>
-                            </div>
-                            <div class="property-details">
-                                <h3>Luxury Apartment Complex</h3>
-                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> Kilimani, Nairobi</p>
-                                <div class="property-specs">
-                                    <span><i class="fas fa-bed"></i> 3-4 Bed</span>
-                                    <span><i class="fas fa-bath"></i> 3 Bath</span>
-                                </div>
-                                <div class="property-footer">
-                                    <div class="property-price">KSH 150K/mo</div>
-                                    <a href="#contact" class="btn-view">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="property-card-premium">
-                            <div class="property-image">
-                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Family Home">
-                                <div class="property-badge">For Sale</div>
-                            </div>
-                            <div class="property-details">
-                                <h3>Executive Family Home</h3>
-                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> Karen, Nairobi</p>
-                                <div class="property-specs">
-                                    <span><i class="fas fa-bed"></i> 5 Bed</span>
-                                    <span><i class="fas fa-car"></i> 2 Garage</span>
-                                </div>
-                                <div class="property-footer">
-                                    <div class="property-price">KSH 45M</div>
-                                    <a href="#contact" class="btn-view">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content" data-aos="fade-right">
-                    <span class="section-badge">Who We Are</span>
-                    <h2 class="section-title">Leading Property Management Since 2010</h2>
-                    <p>Investagrow Capital represents the pinnacle of property management excellence in Kenya. We combine innovative technology with deep market expertise to deliver exceptional results.</p>
                     
-                    <div class="vision-mission">
-                        <div class="vm-item">
-                            <h4><i class="fas fa-eye"></i> Vision</h4>
-                            <p>Becoming the leader in real estate through creation of innovative and sustainable living and working places</p>
-                        </div>
-                        <div class="vm-item">
-                            <h4><i class="fas fa-bullseye"></i> Mission</h4>
-                            <p>To exceed client expectations through advice and exceptional service powered by innovative technology</p>
-                        </div>
-                    </div>
-
-                    <div class="core-values">
-                        <h4>Core Values</h4>
-                        <div class="values-grid">
-                            <div class="value-badge">Integrity</div>
-                            <div class="value-badge">Excellence</div>
-                            <div class="value-badge">Accountability</div>
-                            <div class="value-badge">Innovation</div>
+                    <div class="swiper-slide">
+                        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920&q=90');">
+                            <div class="hero-overlay"></div>
+                            <div class="hero-content-center">
+                                <h1 class="hero-title-large">INVESTAGROW</h1>
+                                <p class="hero-subtitle">EXCEPTIONAL PROPERTIES. EXCEPTIONAL CLIENTS.</p>
+                            </div>
                         </div>
                     </div>
+    
+                    <div class="swiper-slide">
+                        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=90');">
+                            <div class="hero-overlay"></div>
+                            <div class="hero-content-center">
+                                <h1 class="hero-title-large">ELITE RESIDENCES</h1>
+                                <p class="hero-subtitle">RUNDA | CONTEMPORARY LUXURY HOMES</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=90');">
+                            <div class="hero-overlay"></div>
+                            <div class="hero-content-center">
+                                <h1 class="hero-title-large">SKYLINE LIVING</h1>
+                                <p class="hero-subtitle">UPPERHILL | LUXURY HIGH-RISE APARTMENTS</p>
+                            </div>
+                        </div>
+                    </div>
+    
                 </div>
-
-                <div class="about-image" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Modern Building">
-                    <div class="floating-card">
-                        <i class="fas fa-trophy"></i>
-                        <h4>Award Winning</h4>
-                        <p>Best Property Management 2024</p>
+                <div class="swiper-pagination hero-pagination"></div>
+            </div>
+        </section>
+    
+        <!-- Section 2: Feature Cards -->
+        <section class="home-section feature-cards">
+            <div class="container-full">
+                <div class="cards-grid">
+                    <div class="feature-card" data-aos="fade-up">
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Luxury Interior">
+                        </div>
+                        <div class="feature-content">
+                            <h3>DISCOVER ELEVATE</h3>
+                            <p>Exclusive residents-only hub for wellness, dining, community.</p>
+                            <a href="services.html" class="btn-dark">KNOW MORE</a>
+                        </div>
+                    </div>
+    
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Modern Development">
+                        </div>
+                        <div class="feature-content">
+                            <h3>BREATHTAKING DEVELOPMENTS</h3>
+                            <p>Explore our properties for sale inspired by innovation and design</p>
+                            <a href="properties.html" class="btn-dark">EXPLORE</a>
+                        </div>
+                    </div>
+    
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-image bg-dark">
+                            <div class="year-badge">
+                                <h2>2025</h2>
+                                <p>MAKE YOUR<br><strong>MARK</strong></p>
+                                <img src="images/investagrow-logo.png" alt="Investagrow" class="logo-small" onerror="this.style.display='none'">
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3>EXPLORE PROPERTY INSIGHTS</h3>
+                            <p>Peruse a carefully curated blog for lifestyle, buying and property investment in Kenya.</p>
+                            <a href="insights.html" class="btn-dark">START READING</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info" data-aos="fade-right">
-                    <h2>Let's Build Your Future Together</h2>
-                    <p>Ready to take your property investment to the next level? Our team is here to help.</p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Call Us</h4>
-                                <p>0725 00 33 00</p>
-                            </div>
+        </section>
+    
+        <!-- Section 3: Latest Launches -->
+        <section class="home-section latest-launches">
+            <div class="container">
+                <div class="section-intro" data-aos="fade-right">
+                    <span class="section-label">DEVELOPMENTS</span>
+                    <h2>LATEST LAUNCHES</h2>
+                    <p>Investagrow offers high-end homes for sale all over Nairobi. The developments we offer have been conceptualized by our development team to be high quality assets using a data-driven approach in planning and design, that gears property for high rental returns and an escalated rate of capital growth.</p>
+                    <a href="properties.html" class="btn-dark">VIEW ALL DEVELOPMENTS</a>
+                </div>
+            </div>
+    
+            <div class="properties-showcase" data-aos="fade-left">
+                <div class="property-large">
+                    <img src="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=1200&q=80" alt="Waterfront Estate">
+                    <div class="property-label">
+                        <h3>SERENE ESTATES</h3>
+                        <p>KAREN | LAVINGTON | LUXURY VILLAS</p>
+                    </div>
+                </div>
+    
+                <div class="property-grid">
+                    <div class="property-small">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Villa">
+                        <div class="property-label-small">
+                            <p>NATURA | LAVINGTON | LUXURY VILLAS</p>
                         </div>
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email Us</h4>
-                                <p>investagrowcapital@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Visit Us</h4>
-                                <p>Nairobi, Kenya</p>
-                            </div>
+                    </div>
+                    <div class="property-small">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Apartments">
+                        <div class="property-label-small">
+                            <p>SKYVIEW | KILIMANI | MODERN APARTMENTS</p>
                         </div>
                     </div>
                 </div>
-
-                <form class="contact-form" data-aos="fade-left" action="https://formsubmit.co/investagrowcapital@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New Inquiry from Investagrow Website">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-                    <input type="hidden" name="_next" value="https://YOUR-LIVE-URL.com/thank-you.html">
-                    
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
-                    </div>
-                    <div class="form-group">
-                        <select name="service" required>
-                            <option value="">Select Service</option>
-                            <option value="Property Sales">Property Sales</option>
-                            <option value="Property Management">Property Management</option>
-                            <option value="Investment Analysis">Investment Analysis</option>
-                            <option value="Development">Development</option>
-                            <option value="Legal Services">Legal Services</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-submit">
-                        Send Message
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
+    
+        <!-- Section 4: Under Construction -->
+        <section class="home-section under-construction">
+            <div class="construction-grid">
+                <div class="construction-images">
+                    <div class="construction-main" data-aos="fade-right">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Resort Development">
+                        <p class="img-label">ENAKI | NYARI | RESIDENTIAL RESORT</p>
+                    </div>
+                    <div class="construction-secondary">
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Modern Building">
+                            <p class="img-label">COCO | BROOKSIDE | VIBRANT RESIDENCES</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80" alt="Urban Development">
+                            <p class="img-label">ALTURA | UPPERHILL | OPULENT RESIDENCES</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="construction-content" data-aos="fade-left">
+                    <span class="section-label">DEVELOPMENTS</span>
+                    <h2>UNDER CONSTRUCTION</h2>
+                    <p>Each of our developments have their own unique design aesthetic. Our real estate developments in Kenya are focused around providing a luxurious lifestyle.</p>
+                    <a href="properties.html" class="btn-dark">VIEW ALL DEVELOPMENTS</a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Section 5: Property Index -->
+        <section class="home-section property-index">
+            <div class="index-grid">
+                <div class="index-content" data-aos="fade-right">
+                    <span class="section-label">DATA DRIVEN DECISIONS</span>
+                    <h2>THE INVESTAGROW INDEX</h2>
+                    <p>Investagrow is committed to the quarterly publication of The Property Index. This has proven over the last decade to be a real estate tool for investors, homeowners, the financial industry and consumers with current and historical information about house price inflation, allowing them to make informed investment decisions about real estate in Kenya.</p>
+                    <a href="insights.html" class="btn-dark">TAKE ME THERE</a>
+                </div>
+    
+                <div class="index-images" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Data Analysis">
+                </div>
+            </div>
+    
+            <div class="experience-section" data-aos="fade-up">
+                <div class="experience-image">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Business Strategy">
+                </div>
+                <div class="experience-label">
+                    <span class="label-small">INNATE EXPERIENCE</span>
+                    <span class="label-small">STATISTICAL PROWESS</span>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Section 6: Legacy -->
+        <section class="home-section legacy-section">
+            <div class="legacy-grid">
+                <div class="legacy-content" data-aos="fade-right">
+                    <span class="section-label">OUR PEDIGREE</span>
+                    <h2>15 YEAR LEGACY</h2>
+                    <p>Investagrow Capital was formed in 2010 with a vision to establish a comprehensive Real Estate firm that reinvented the market patterns by introducing transparency, integrity and professionalism in a market calling for more global standards.</p>
+                    <p>Investagrow with its wealth of experience continuously reaps new benefits from opportunities presented by changing market dynamics as well as evolving business and property cycles.</p>
+    
+                    <div class="stats-legacy">
+                        <div class="stat-box">
+                            <h3 class="stat-counter" data-target="200">0</h3>
+                            <p>COMBINED YEARS<br>EXPERIENCE</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 class="stat-counter" data-target="500">0</h3>
+                            <p>PROPERTIES MANAGED</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 class="stat-counter" data-target="1200">0</h3>
+                            <p>HAPPY CLIENTS</p>
+                        </div>
+                    </div>
+    
+                    <a href="about.html" class="btn-dark">GET IN TOUCH</a>
+                </div>
+    
+                <div class="legacy-image" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900&q=80" alt="Professional Office">
+                    <p class="img-caption">INVESTAGROW EXPERIENCE CENTRE | ABC PLACE | WESTLANDS</p>
+                </div>
+            </div>
+        </section>
+    
+    </main>
 
     <footer class="footer">
         <div class="container">
