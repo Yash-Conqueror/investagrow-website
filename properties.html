@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - Investagrow Capital</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/properties-page.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <h1 class="brand-name">INVESTAGROW</h1>
+                        <p class="brand-tagline">REAL ESTATE</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="services.html" class="nav-link">SERVICES</a></li>
+                <li><a href="properties.html" class="nav-link">PROPERTIES</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="index.html#contact" class="nav-link btn-primary">GET STARTED</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="properties-filter-bar">
+        <div class="container-wide">
+            <div class="filter-bar-grid">
+                <div class="filter-dropdown">
+                    <i class="fas fa-home"></i>
+                    <select id="offerType">
+                        <option value="all">Offer Type</option>
+                        <option value="sale">For Sale</option>
+                        <option value="rent">For Rent</option>
+                    </select>
+                </div>
+                <div class="filter-dropdown">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select id="location">
+                        <option value="all">Location</option>
+                        <option value="karen">Karen</option>
+                        <option value="kilimani">Kilimani</option>
+                        <option value="westlands">Westlands</option>
+                        <option value="runda">Runda</option>
+                        <option value="upperhill">Upperhill</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="properties-main">
+        <div class="container-wide">
+            <div class="properties-layout">
+                
+                <!-- Sidebar Filters -->
+                <aside class="properties-sidebar">
+                    
+                    <div class="filter-section">
+                        <h3>Property Type</h3>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="radio" name="propertyType" value="all" checked>
+                                <span>Any (153)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="radio" name="propertyType" value="land">
+                                <span>Land (62)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="radio" name="propertyType" value="apartments">
+                                <span>Apartments (41)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="radio" name="propertyType" value="houses">
+                                <span>Houses (35)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="radio" name="propertyType" value="offices">
+                                <span>Offices (12)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="radio" name="propertyType" value="industrial">
+                                <span>Industrial (3)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Price</h3>
+                        <input type="text" class="filter-input" placeholder="Min Price">
+                        <input type="text" class="filter-input" placeholder="Max Price">
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Bedrooms</h3>
+                        <select class="filter-select">
+                            <option>Bedrooms</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5+</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Bathrooms</h3>
+                        <select class="filter-select">
+                            <option>Bathrooms</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4+</option>
+                        </select>
+                    </div>
+
+                </aside>
+
+                <!-- Properties Grid -->
+                <div class="properties-content">
+                    
+                    <div class="properties-header">
+                        <h2><span class="result-count">153</span> Results <span class="category-name">Real Estate</span></h2>
+                        <div class="properties-controls">
+                            <div class="sort-by">
+                                <span>Sort by:</span>
+                                <select id="sortBy">
+                                    <option>Most Relevant</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Price: High to Low</option>
+                                    <option>Newest</option>
+                                </select>
+                            </div>
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                                <button class="view-btn" data-view="list"><i class="fas fa-bars"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="properties-grid" id="propertiesGrid">
+                        
+                        <!-- Property Card 1 -->
+                        <div class="property-card" data-type="sale" data-category="houses">
+                            <div class="property-image">
+                                <span class="featured-badge">Featured</span>
+                                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Townhouse">
+                                <button class="property-nav prev"><i class="fas fa-chevron-left"></i></button>
+                                <button class="property-nav next"><i class="fas fa-chevron-right"></i></button>
+                                <div class="property-dots">
+                                    <span class="dot active"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                            </div>
+                            <div class="property-info">
+                                <h3>4 Bedroom Townhouse for Sale in Syokimau</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> 02 Mwananchi Rd, Nairobi, Kenya</p>
+                                <div class="property-price">KES18,000,000</div>
+                                <div class="property-specs">
+                                    <span><i class="fas fa-bed"></i> 4</span>
+                                    <span><i class="fas fa-bath"></i> 4</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 2,400 ft²</span>
+                                </div>
+                                <div class="property-actions">
+                                    <button class="action-btn"><i class="far fa-eye"></i></button>
+                                    <button class="action-btn"><i class="fas fa-exchange-alt"></i></button>
+                                    <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    <span class="views">1417 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 2 -->
+                        <div class="property-card" data-type="sale" data-category="land">
+                            <div class="property-image">
+                                <span class="featured-badge">Featured</span>
+                                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Land">
+                            </div>
+                            <div class="property-info">
+                                <h3>Residential Plot for Sale at Mhasibu Estate, Ruiru</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> WX37+MWM, Ruiru, Kenya</p>
+                                <div class="property-price">KES8,500,000</div>
+                                <div class="property-specs">
+                                    <span><i class="fas fa-ruler-combined"></i> 0.125 acres</span>
+                                </div>
+                                <div class="property-actions">
+                                    <button class="action-btn"><i class="far fa-eye"></i></button>
+                                    <button class="action-btn"><i class="fas fa-exchange-alt"></i></button>
+                                    <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    <span class="views">702 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 3 -->
+                        <div class="property-card" data-type="sale" data-category="houses">
+                            <div class="property-image">
+                                <span class="featured-badge">Featured</span>
+                                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" alt="Maisonettes">
+                            </div>
+                            <div class="property-info">
+                                <h3>4 Bedroom Maisonettes for Sale at Kenpipe Gardens, Kitengela</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> FWQH+WXC, Kitengela, Kenya</p>
+                                <div class="property-price">KES11,000,000</div>
+                                <div class="property-specs">
+                                    <span><i class="fas fa-bed"></i> 4</span>
+                                    <span><i class="fas fa-bath"></i> 4</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 1,400 ft²</span>
+                                </div>
+                                <div class="property-actions">
+                                    <button class="action-btn"><i class="far fa-eye"></i></button>
+                                    <button class="action-btn"><i class="fas fa-exchange-alt"></i></button>
+                                    <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    <span class="views">877 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 4 -->
+                        <div class="property-card" data-type="sale" data-category="land">
+                            <div class="property-image">
+                                <span class="featured-badge">Featured</span>
+                                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Plot">
+                            </div>
+                            <div class="property-info">
+                                <h3>Redevelopment Plot for Sale in Westlands, Brookside Drive</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> PQRR+JPR, Nairobi, Kenya</p>
+                                <div class="property-price">KES470,000,000</div>
+                                <div class="property-actions">
+                                    <button class="action-btn"><i class="far fa-eye"></i></button>
+                                    <button class="action-btn"><i class="fas fa-exchange-alt"></i></button>
+                                    <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    <span class="views">640 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 5 -->
+                        <div class="property-card" data-type="rent" data-category="offices">
+                            <div class="property-image">
+                                <span class="featured-badge">Featured</span>
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Office">
+                            </div>
+                            <div class="property-info">
+                                <h3>Office Spaces to Let in Upper Hill – Rennaisance Corporate Park</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> MRX9+62P, Nairobi, Kenya</p>
+                                <div class="property-price">KES60000/month</div>
+                                <div class="property-actions">
+                                    <button class="action-btn"><i class="far fa-eye"></i></button>
+                                    <button class="action-btn"><i class="fas fa-exchange-alt"></i></button>
+                                    <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    <span class="views">594 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 6 -->
+                        <div class="property-card" data-type="sale" data-category="houses">
+                            <div class="property-image">
+                                <span class="featured-badge">Featured</span>
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Villa">
+                            </div>
+                            <div class="property-info">
+                                <h3>5 Bedroom All Ensuite Villa for Sale in Kileleshwa</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> PQ6F+JR5, Kaputei Rd, Nairobi, Kenya</p>
+                                <div class="property-price">KES70,000,000</div>
+                                <div class="property-specs">
+                                    <span><i class="fas fa-bed"></i> 5</span>
+                                    <span><i class="fas fa-bath"></i> 5</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 5,100 ft²</span>
+                                </div>
+                                <div class="property-actions">
+                                    <button class="action-btn"><i class="far fa-eye"></i></button>
+                                    <button class="action-btn"><i class="fas fa-exchange-alt"></i></button>
+                                    <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    <span class="views">728 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 7 -->
+                        <div class="property-card" data-type="sale" data-category="apartments">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Apartments">
+                            </div>
+                            <div class="property-info">
+                                <h3>3 Bedroom Apartment for Sale in Langata</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> MQJR+8RW, Nairobi, Kenya</p>
+                                <div class="property-price">KES26,500,000</div>
+                                <div class="property-specs">
+                                    <span><i class="fas fa-bed"></i> 4</span>
+                                    <span><i class="fas fa-bath"></i> 4</span>
+                                </div>
+                                <div class="property-actions">
+                                    <button class="action-btn"><i class="far fa-eye"></i></button>
+                                    <button class="action-btn"><i class="fas fa-exchange-alt"></i></button>
+                                    <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    <span class="views">91 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 8 -->
+                        <div class="property-card" data-type="sale" data-category="land">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Land">
+                            </div>
+                            <div class="property-info">
+                                <h3>Prime Plot for Sale in Rongai, Kandisi Area</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> HPJR+X2M, Ongata Rongai, Kenya</p>
+                                <div class="property-price">KES7,000,000</div>
+                                <div class="property-actions">
+                                    <button class="action-btn"><i class="far fa-eye"></i></button>
+                                    <button class="action-btn"><i class="fas fa-exchange-alt"></i></button>
+                                    <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    <span class="views">27 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 9 -->
+                        <div class="property-card" data-type="rent" data-category="apartments">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80" alt="Apartment">
+                            </div>
+                            <div class="property-info">
+                                <h3>2 Bedroom Apartment to Let in Majeng
+
+o</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> 2PQ6+8VQ, Majengo, Kenya</p>
+                                <div class="property-price">KES45,000/month</div>
+                                <div class="property-specs">
+                                    <span><i class="fas fa-bed"></i> 2</span>
+                                    <span><i class="fas fa-bath"></i> 2</span>
+                                </div>
+                                <div class="property-actions">
+                                    <button class="action-btn"><i class="far fa-eye"></i></button>
+                                    <button class="action-btn"><i class="fas fa-exchange-alt"></i></button>
+                                    <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    <span class="views">146 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pagination">
+                        <span class="pagination-info">Showing <strong>1</strong> to <strong>12</strong> of <strong>153</strong> results</span>
+                        <div class="pagination-buttons">
+                            <button class="page-btn prev"><i class="fas fa-chevron-left"></i></button>
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <button class="page-btn">4</button>
+                            <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>INVESTAGROW</h3>
+                    <p>Premium property management and real estate solutions across Kenya.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> investagrowcapital@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 0725 00 33 00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Investagrow Capital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/properties-page.js"></script>
+</body>
+</html>
