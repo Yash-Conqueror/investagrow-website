@@ -193,7 +193,7 @@ body {
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 700;
     letter-spacing: 8px;
-    margin: 1.5rem 0;
+    margin: 0.3rem 0;
     text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
 }
 
@@ -233,7 +233,7 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
     text-decoration: none;
-    margin-top: 2rem;
+    margin-top: 20rem;
     transition: all 0.3s ease;
     text-transform: uppercase;
 }
