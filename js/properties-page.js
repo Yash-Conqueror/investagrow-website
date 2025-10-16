@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Generate property cards dynamically from data
     function generatePropertyCards() {
-        propertiesGrid.innerHTML = ''; // Clear existing cards
-        
+        // Build HTML once to avoid repeated DOM writes
+        let html = '';
         propertiesData.forEach(property => {
-            const propertyCard = `
+            html += `
                 <div class="property-card" 
                      data-id="${property.id}"
                      data-type="${property.type}" 
@@ -19,28 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
                      data-bedrooms="${property.bedrooms}"
                      data-bathrooms="${property.bathrooms}"
                      data-area="${property.area}"
-                    data-price="${property.price.replace(/[^0-9]/g, '')}"
-
+                     data-price="${property.price.replace(/[^0-9]/g, '')}"
                      data-location="${property.location.split(',')[0].toLowerCase()}">
-                    
                     ${property.badge ? `<span class="property-badge">${property.badge}</span>` : ''}
-                    
                     <div class="property-image">
                         <img src="${property.image}" alt="${property.title}">
                         <div class="property-type">${property.type}</div>
                     </div>
-                    
                     <div class="property-content">
                         <h3 class="property-title">${property.title}</h3>
                         <p class="property-location"><i class="fas fa-map-marker-alt"></i> ${property.location}</p>
                         <div class="property-price">${property.price}</div>
-                        
                         <div class="property-features">
                             <span><i class="fas fa-bed"></i> ${property.bedrooms}</span>
                             <span><i class="fas fa-bath"></i> ${property.bathrooms}</span>
                             <span><i class="fas fa-ruler-combined"></i> ${property.area}</span>
                         </div>
-                        
                         <div class="property-actions">
                             <button class="action-btn" title="View Details"><i class="far fa-eye"></i></button>
                             <button class="action-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
@@ -48,11 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             <span class="views">${property.views} Views</span>
                         </div>
                     </div>
-                </div>
-            `;
-            
-            propertiesGrid.innerHTML += propertyCard;
+                </div>`;
         });
+        propertiesGrid.innerHTML = html;
         
         // Re-initialize event listeners after generating cards
         initializePropertyCards();
@@ -325,8 +317,9 @@ document.addEventListener('DOMContentLoaded', function() {
        // });
 
         // Min/Max Price Filters
-        const minPriceInput = document.querySelector('.filter-input[placeholder="Min Price"]');
-        const maxPriceInput = document.querySelector('.filter-input[placeholder="Max Price"]');
+        // Use starts-with selector to tolerate placeholder text variations like "(KSh)"
+        const minPriceInput = document.querySelector('.filter-input[placeholder^="Min Price"]');
+        const maxPriceInput = document.querySelector('.filter-input[placeholder^="Max Price"]');
 
         if (minPriceInput && maxPriceInput) {
             minPriceInput.addEventListener('input', debounce(applyPriceFilter, 500));
