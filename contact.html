@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Investagrow Capital</title>
+    <title>Contact Us - Investagrow Capital</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/contact.css">
@@ -30,62 +30,119 @@
             </button>
 
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">HOME</a></li>
+                <li><a href="index.html" class="nav-link">HOME</a></li>
                 <li><a href="services.html" class="nav-link">SERVICES</a></li>
-                <li><a href="properties.html" class="nav-link">PROPERTIES</a></li> 
+                <li><a href="properties.html" class="nav-link">PROPERTIES</a></li>
                 <li><a href="our-story.html" class="nav-link">OUR STORY</a></li>
-                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-                <li><a href="#contact" class="nav-link btn-primary">GET STARTED</a></li>
+                <li><a href="contact.html" class="nav-link btn-primary">GET STARTED</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Get In Touch Section -->
-    <section class="get-in-touch">
+    <!-- Hero Section -->
+    <section class="contact-hero">
         <div class="container-wide">
-            <div class="touch-grid">
-                
-                <div class="touch-content">
-                    <span class="section-label">GET IN TOUCH</span>
-                    
-                    <div class="office-image">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&q=80" alt="Investagrow Office">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Get In Touch</h1>
+                    <p>If you'd like to know more information about us and any of our services, please get in touch with the below details or the contact form provided.</p>
+                </div>
+                <div class="hero-badge">
+                    <div class="badge-burst">
+                        <span>BUILDING<br>TRUST.<br>FORGING<br>FUTURES.</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>+254 725 00 33 00</h4>
-                            </div>
-                        </div>
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <h2>Connect with INVESTAGROW</h2>
+            <p class="form-intro">Whether you are interested in working together on a new property project, have a question/comment, interested in career opportunities at Investagrow, or just want to drop us a line, we'd love to hear from you.</p>
 
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>investagrowcapital@gmail.com</h4>
-                            </div>
+            <form class="contact-form" id="contactForm">
+                <label class="form-label-top">What's the nature of your inquiry?*</label>
+                
+                <div class="form-row-2">
+                    <input type="text" name="firstName" placeholder="First Name*" required>
+                    <input type="text" name="lastName" placeholder="Last Name*" required>
+                </div>
+
+                <input type="tel" name="phone" placeholder="Phone Number*" required>
+                
+                <input type="email" name="email" placeholder="Email*" required>
+
+                <label class="form-label">Service Line Required *</label>
+                <select name="service" required>
+                    <option value="">Please choose the requested service from the dropdown below:</option>
+                    <option value="property-management">Property Sales & Management</option>
+                    <option value="legal">Legal & Administrative Support</option>
+                    <option value="investment">Investment Analysis & Advisory</option>
+                    <option value="development">Property Development Support</option>
+                    <option value="valuation">Property Valuations</option>
+                    <option value="consultation">Real Estate Consultation</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <textarea name="details" placeholder="Details of your enquiry*" rows="6" required></textarea>
+
+                <label class="form-label">Property Address Related To Enquiry *</label>
+                <input type="text" name="propertyAddress" placeholder="Property Address" required>
+
+                <label class="form-label">Street Address</label>
+                <div class="form-row-2">
+                    <input type="text" name="street1" placeholder="Street Address Line 1">
+                    <input type="text" name="street2" placeholder="Street Address Line 2">
+                </div>
+
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Customer Support Section -->
+    <section class="customer-support">
+        <div class="container">
+            <h2>Customer Support</h2>
+            <p>If you have questions on an Investagrow project or any other queries, don't hesitate to give us a call for live customer & technical support. We're here for you, 24/7/365:</p>
+
+            <div class="support-cards">
+                
+                <div class="support-card">
+                    <div class="card-header">
+                        <span>0725 00 33 00</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Call Us</h3>
+                        <div class="card-icon">
+                            <i class="fas fa-phone"></i>
                         </div>
                     </div>
                 </div>
 
-                <div class="working-hours">
-                    <span class="section-label">WORKING HOURS</span>
-                    
-                    <div class="hours-image">
-                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80" alt="Office Meeting Room">
+                <div class="support-card">
+                    <div class="card-header">
+                        <span>We'll respond within 1 business day</span>
                     </div>
+                    <div class="card-body">
+                        <h3>Email Us</h3>
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="hours-details">
-                        <h3>MONDAY - FRIDAY</h3>
-                        <p>8.00 AM - 5.00 PM</p>
-
-                        <h3>SATURDAY</h3>
-                        <p>9.00 AM - 1.00 PM</p>
+                <div class="support-card">
+                    <div class="card-header">
+                        <span>Consult for Frequently Asked Questions</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>FAQs</h3>
+                        <div class="card-icon">
+                            <i class="fas fa-question"></i>
+                        </div>
                     </div>
                 </div>
 
@@ -93,96 +150,103 @@
         </div>
     </section>
 
-    <!-- We're Social Section -->
-    <section class="social-section">
-        <div class="container-wide">
-            <div class="social-grid">
+    <!-- Our Offices Section -->
+    <section class="our-offices">
+        <div class="container">
+            <h2>Our Office</h2>
+
+            <div class="offices-grid">
                 
-                <div class="social-content">
-                    <span class="section-label">WE'RE SOCIAL</span>
-                    
-                    <div class="social-image">
-                        <img src="C:\projects\investagrow-website\images\558293411_833988453133752_4383183622398659151_n.jpg" alt="Development Concept">
-                    </div>
+                <div class="office-info">
+                    <h3>Nairobi</h3>
+                    <p>LAXCON House<br>
+                    Limuru Road<br>
+                    Ngara, Nairobi</p>
 
-                    <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-
-                <div class="location-map">
-                    <span class="section-label">WHERE WE'RE LOCATED</span>
-                    
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7891234!2d36.8219!3d-1.2864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTcnMTEuMCJTIDM2wrA0OScxOC44IkU!5e0!3m2!1sen!2ske!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="office-contact">
+                        <p><strong>T:</strong> <a href="tel:0725003300">0725 00 33 00</a></p>
+                        <a href="#" class="link-directions">Get directions</a>
                     </div>
                 </div>
 
             </div>
+
+            <div class="office-hours">
+                <h3>Office Hours</h3>
+                <p><strong>Monday to Friday</strong><br>
+                9am till 5pm</p>
+                <p><strong>Saturday</strong><br>
+                9am till 1pm</p>
+                <br>
+                <p><a href="mailto:investagrowcapital@gmail.com">investagrowcapital@gmail.com</a></p>
+            </div>
         </div>
     </section>
-    <footer class="footer-about">
-        <div class="container-wide">
-            <div class="footer-about-grid">
-                
-                <div class="footer-about-col">
-                    <h4>INVESTAGROW REAL ESTATE</h4>
-                    <p>LAXCON HOUSE,7TH FLOOR LIMURU ROAD</p>
-                    <p>P.O BOX 14090 - 00800</p>
-                    <p>NAIROBI, KENYA</p>
-                    <br>
-                    <p>+254 725 00 33 00</p>
-                    <br>
-                    <p>INVESTAGROWCAPITAL@GMAIL.COM</p>
-                </div>
 
-                <div class="footer-about-col">
-                    <h4>SUBSCRIBE</h4>
-                    <form class="subscribe-form">
-                        <input type="email" placeholder="Enter your email here*" required>
-                        <button type="submit">SUBMIT</button>
-                    </form>
-                    
-                    <h4>SOCIAL</h4>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
+    <!-- CTA Section -->
+    <section class="contact-cta">
+        <div class="stars-pattern">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="cta-content">
+            <h2>Let's work together</h2>
+            <p>If you have a vision, we're ready to help you see it through.</p>
+            <a href="#contactForm" class="btn-connect">Connect</a>
+        </div>
+    </section>
 
-                <div class="footer-about-col">
-                    <h4>COMPANY</h4>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>INVESTAGROW</h3>
+                    <p>Premium property management and real estate solutions across Kenya.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="services.html">SERVICES</a></li>
-                        <li><a href="#">CAREERS</a></li>
-                        <li><a href="#">INSIGHTS</a></li>
-                        <li><a href="index.html#contact">GET IN TOUCH</a></li>
-                        <li><a href="#">PRIVACY POLICY</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="about.html">About</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-about-col">
-                    <h4>EXPLORE</h4>
-                    <ul>
-                        <li><a href="index.html">INVESTAGROW HOME</a></li>
-                        <li><a href="properties.html">PROPERTY FOR SALE</a></li>
-                        <li><a href="properties.html">PROPERTY TO LET</a></li>
-                        <li><a href="properties.html">DEVELOPMENTS</a></li>
-                        <li><a href="#">INVESTAGROW INDEX</a></li>
-                    </ul>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> investagrowcapital@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 0725 00 33 00</p>
                 </div>
-
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Investagrow Capital. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/app.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
