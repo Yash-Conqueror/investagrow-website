@@ -102,7 +102,7 @@ function populatePropertyDetails(property) {
         featuresList.innerHTML = '';
         property.features.forEach(feature => {
             const li = document.createElement('li');
-            li.innerHTML = `<i class="fas fa-check-circle"></i> ${feature}`;
+            li.innerHTML = `<i class="fas fa-check-circle"></i> ${feature}`;15 
             featuresList.appendChild(li);
         });
     }
