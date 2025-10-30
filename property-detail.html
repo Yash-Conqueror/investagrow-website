@@ -201,11 +201,15 @@
                     <!-- Inquiry Form -->
                     <div class="inquiry-form-card">
                         <h3>Send Message</h3>
-                        <form id="contactForm">
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Your Email" required>
-                            <input type="tel" placeholder="Your Phone" required>
-                            <textarea placeholder="Your Message" rows="4" required></textarea>
+                        <form id="contactForm" action="https://formsubmit.co/investagrowcapital@gmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="📌 Property Inquiry from Detail Page">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="box">
+                            <input type="hidden" name="_next" value="thank-you.html">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <input type="tel" name="Phone" placeholder="Your Phone" required>
+                            <textarea name="Message" placeholder="Your Message" rows="4" required></textarea>
                             <button type="submit" class="btn-primary btn-full">Send Message</button>
                         </form>
                     </div>
@@ -249,6 +253,13 @@
     <script src="js/app.js"></script>
     <script src="js/properties-data.js"></script>
     <script src="js/properties-detail.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var nextInputs = document.querySelectorAll('form[action^="https://formsubmit.co/"] input[name="_next"]');
+        var thankUrl = window.location.origin + '/thank-you.html';
+        nextInputs.forEach(function(input){ input.value = thankUrl; });
+    });
+    </script>
 
 </body>
 </html>

@@ -143,6 +143,26 @@ body {
     align-items: center;
 }
 
+/* Mobile menu button */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1100;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #ffffff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 .nav-brand {
     display: flex;
     align-items: center;
@@ -188,6 +208,8 @@ body {
     gap: 3rem;
     align-items: center;
 }
+
+.nav-menu li { list-style: none; }
 
 .nav-link {
     color: white;
@@ -391,6 +413,8 @@ body {
     .hero-subtitle { letter-spacing: 2px; }
     .stats-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     .hero-pagination { bottom: 180px !important; }
+    /* Hide potential stray pagination dot on small screens */
+    .heroSwiper .swiper-pagination { display: none !important; }
 }
 
 .stat-item {

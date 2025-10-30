@@ -518,5 +518,12 @@ title="Chat with us on WhatsApp">
     <script src="js/app.js"></script>
     <script src="js/services.js"></script>
     <script src="js/form-handler.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var nextInputs = document.querySelectorAll('form[action^="https://formsubmit.co/"] input[name="_next"]');
+        var thankUrl = window.location.origin + '/thank-you.html';
+        nextInputs.forEach(function(input){ input.value = thankUrl; });
+    });
+    </script>
 </body>
 </html>
