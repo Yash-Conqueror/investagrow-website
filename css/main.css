@@ -100,6 +100,13 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Global Image Responsive Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
@@ -409,12 +416,21 @@ body {
 
 @media (max-width: 768px) {
     .hero-carousel { height: 80vh; }
-    .hero-title-large { letter-spacing: 4px; }
-    .hero-subtitle { letter-spacing: 2px; }
+    .hero-title-large { 
+        letter-spacing: 4px; 
+        font-size: 2.5rem !important;
+    }
+    .hero-subtitle { 
+        letter-spacing: 2px; 
+        font-size: 0.9rem !important;
+    }
     .stats-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     .hero-pagination { bottom: 180px !important; }
     /* Hide potential stray pagination dot on small screens */
     .heroSwiper .swiper-pagination { display: none !important; }
+    .container {
+        padding: 0 1rem;
+    }
 }
 
 .stat-item {
@@ -953,6 +969,9 @@ body {
     .hero-buttons { flex-direction: column; }
     .stats-row { grid-template-columns: 1fr; gap: 2rem; }
     .services-grid { grid-template-columns: 1fr; }
+    .container {
+        padding: 0 1rem;
+    }
 }
 .home-page {
     padding-top: 0;

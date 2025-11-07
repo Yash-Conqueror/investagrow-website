@@ -257,12 +257,13 @@
     justify-content: center;
     flex-shrink: 0;
     transition: all 0.3s;
+    line-height: 1;
 }
 
 .accordion-item.active .accordion-icon {
-    transform: rotate(180deg);
     background: #2c3e50;
     color: white;
+    border-color: #2c3e50;
 }
 
 .accordion-content {
@@ -327,10 +328,17 @@
     gap: 2rem;
 }
 
+.person-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .person-card {
     background: transparent;
     will-change: transform;
     transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .person-card:hover {
@@ -339,7 +347,7 @@
 
 .person-image {
     position: relative;
-    height: 400px;
+    height: 300px;
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 1rem;
@@ -351,6 +359,7 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
+    max-width: 100%;
 }
 
 .person-card:hover .person-image img {
@@ -516,5 +525,4 @@
 
 .person-card.animate-in:hover {
     transform: translateY(-10px);
-}
 }

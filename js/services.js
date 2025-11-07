@@ -18,6 +18,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Testimonials Swiper
+    const testimonialsSwiper = new Swiper('.testimonialsSwiper', {
+        loop: true,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+        },
+        speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: '.testimonials-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.testimonials-nav.swiper-button-next',
+            prevEl: '.testimonials-nav.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            }
+        }
+    });
+
     // AOS Animations
     AOS.init({
         duration: 800,

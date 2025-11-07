@@ -39,16 +39,29 @@ document.addEventListener('DOMContentLoaded', function() {
     accordionHeaders.forEach(header => {
         header.addEventListener('click', function() {
             const accordionItem = this.parentElement;
+            const accordionIcon = this.querySelector('.accordion-icon');
             const isActive = accordionItem.classList.contains('active');
             
-            // Close all accordion items
+            // Close all accordion items and reset their icons
             document.querySelectorAll('.accordion-item').forEach(item => {
                 item.classList.remove('active');
+                const icon = item.querySelector('.accordion-icon');
+                if (icon) {
+                    icon.textContent = '+';
+                }
             });
             
             // Open clicked item if it wasn't active
             if (!isActive) {
                 accordionItem.classList.add('active');
+                if (accordionIcon) {
+                    accordionIcon.textContent = '−';
+                }
+            } else {
+                // If it was active, it's now closed (icon already reset above)
+                if (accordionIcon) {
+                    accordionIcon.textContent = '+';
+                }
             }
         });
     });
@@ -59,6 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initialize first accordion as open
-    document.querySelector('.accordion-item')?.classList.add('active');
+    const firstAccordion = document.querySelector('.accordion-item');
+    if (firstAccordion) {
+        firstAccordion.classList.add('active');
+        const firstIcon = firstAccordion.querySelector('.accordion-icon');
+        if (firstIcon) {
+            firstIcon.textContent = '−';
+        }
+    }
 
 });
